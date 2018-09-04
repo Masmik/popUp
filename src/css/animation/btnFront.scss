@@ -1,12 +1,10 @@
 @import "../variables";
 
-.btn_font {
+.btnFront {
   --offset: 10px;
   --border-size: 2px;
-
   display: block;
   position: relative;
-  padding: 10px 5px;
   appearance: none;
   border: 0;
   background: transparent;

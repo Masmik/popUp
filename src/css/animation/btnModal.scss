@@ -13,7 +13,7 @@ $col) {
   color: $col;
 }
 
-.button-container {
+.btn__container {
   font-family: $main_text_font;
   box-sizing: border-box;
   position: relative;
@@ -37,7 +37,7 @@ $col) {
   &:hover {
     border: 2px solid $inactive_border_color;
 
-    &.button-container_cancel {
+    &.btn__container_cancel {
       border: none;
       border-bottom: 2px solid $active_border_color;
     }
@@ -77,7 +77,7 @@ $col) {
   }
 }
 
-.mas {
+.btn__animationText {
   font-family: $main_text_font;
   position: absolute;
   color: $inactive_text_color;
@@ -88,7 +88,6 @@ $col) {
   padding-top: 10px;
   overflow: hidden;
   height: 40px;
-  //background-color: $active_border_color;
 
   &_cancel {
     background-color: $active_button_color;

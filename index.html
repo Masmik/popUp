@@ -9,21 +9,21 @@
     <script src="dist/js/main.min.js"></script>
 </head>
 <body>
-<section class="contentBlock ">
-    <button id="modalBtn" class="button btn_font">Click Here
-        <div class="btn_font__horizontal"></div>
-        <div class="btn_font__vertical"></div>
+<section class="wrapper ">
+    <button id="btnFront" class="btn btnFront">Click Here
+        <span class="btnFront__horizontal"></span>
+        <span class="btnFront__vertical"></span>
     </button>
-    <div id="modalBlock" class="modal is-hidden">
+    <div id="modal" class="modal hidden">
         <div class="modal__content">
             <div class="modal__header">
-                <button class="modal__closeBtn closeBtn">
+                <button class="modal__closeIcon closeIcon">
                     <!--<object class="closeBtn_icon" data="dist/img/icon-popup-close.svg" type="image/svg+xml"></object>-->
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="24px" height="24px" viewBox="0 0 24 24" style="enable-background:new 0 0 24 24;" xml:space="preserve">
 <g>
 	<g>
-		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#8B93A3;"
+		<path style="fill-rule:evenodd;clip-rule:evenodd;fill:#8b93a3;"
 			  d="M12,0C5.4,0,0,5.4,0,12s5.4,12,12,12c6.6,0,12-5.4,12-12
 			S18.6,0,12,0z M12,22C6.5,22,2,17.5,2,12C2,6.5,6.5,2,12,2c5.5,0,10,4.5,10,10C22,17.5,17.5,22,12,22z M16.7,7.3
 			c-0.4-0.4-1-0.4-1.4,0L12,10.6L8.7,7.3c-0.4-0.4-1-0.4-1.4,0c-0.4,0.4-0.4,1,0,1.4l3.3,3.3l-3.3,3.3c-0.4,0.4-0.4,1,0,1.4
@@ -36,23 +36,19 @@
             <div class="modal__body">
                 <img class="modal__notificationIcon" src="dist/img/icon-warning_notify-red.svg" alt="Warning red icon">
                 <h2 class="modal__text">Are you sure you want to uninstall the Shazam app</h2>
-                <div class="modal__buttons">
-                    <div class="button-container button-container_cancel">
-                        <span class="mas mas_cancel">Cancel</span>
+                <div class="modal__btn">
+                    <div class="btn__container btn__container_cancel">
+                        <span class="btn__animationText btn__animationText_cancel">Cancel</span>
                         <button class="btn btn_cancel" type="button" name="Hover">Cancel</button>
                     </div>
-                    <div class="button-container button-container_uninstall">
-                        <span class="mas">Uninstall</span>
+                    <div class="btn__container btn__container_uninstall">
+                        <span class="btn__animationText">Uninstall</span>
                         <button class="btn" type="button" name="Hover">Uninstall</button>
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
 </section>
-
-
 </body>
 </html>
