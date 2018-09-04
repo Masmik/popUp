@@ -101,10 +101,12 @@
   opacity: 1;
 }
 .modal__closeIcon:hover {
-  svg path {
-    fill: $active_button_color !important;
+  svg {
+    fill: $active_button_color;
   }
 }
 
 @import "animation/btnFront";
 @import "animation/btnModal";
+
+

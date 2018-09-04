@@ -40,7 +40,9 @@ function popUpHandler() {
             modal.classList.remove(currentClass);
             setTimeout(function () {
                 modal.classList.add(netxClass);
-            }, 350);
+            }, 450);
+
+            // modal.classList.add(netxClass);
         }
     }
 
@@ -58,7 +60,7 @@ function popUpHandler() {
         e.preventDefault();
         return new Promise((resolve) => {
             closeModal();
-            setTimeout(() => resolve(), 300);
+            setTimeout(() => resolve(), 450);
         }).then(showAlert);
     }
 
