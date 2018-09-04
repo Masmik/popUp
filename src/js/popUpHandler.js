@@ -6,7 +6,7 @@ function popUpHandler() {
     var modalBtn = document.getElementById('modalBtn');
     var closeBtnIcon = document.getElementsByClassName('modal__closeBtn')[0];
     var cancelBtn = document.getElementsByClassName('modal__button_cancel')[0];
-    var uninstallBtn = document.getElementsByClassName('modal__button_uninstall')[0];
+    var uninstallBtn = document.getElementsByClassName('button_uninstall')[0];
 
     console.log(uninstallBtn);
 
@@ -59,5 +59,4 @@ function popUpHandler() {
     function showAlert() {
         alert("Done");
     }
-
 }
