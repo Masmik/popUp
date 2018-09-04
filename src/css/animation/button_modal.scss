@@ -19,7 +19,6 @@
   border-radius: 0;
   box-shadow: inset 0 0 0 var(--border-size) currentcolor;
   transition: all .8s ease;
-
   &:hover {
     background: $active_button_color;
     color: $active_text_color;

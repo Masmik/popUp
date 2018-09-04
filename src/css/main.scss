@@ -36,8 +36,15 @@
   letter-spacing: 0.04em;
 }
 
-.modal {
+.is-hidden{
   display: none;
+}
+
+.open{
+  display: block;
+}
+
+.modal {
   position: fixed;
   box-sizing: border-box;
   z-index: 1;
@@ -194,6 +201,4 @@
     mask-position: 100% 0;
   }
 }
-
-
 
