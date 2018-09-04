@@ -4,13 +4,13 @@ function popUpHandler() {
     // Get elements
     var contentBlock = document.getElementsByClassName('contentBlock')[0];
     console.log(contentBlock);
-    
+
 
     var modal = document.getElementById('modalBlock');
     var modalBtn = document.getElementById('modalBtn');
     var closeBtnIcon = document.getElementsByClassName('modal__closeBtn')[0];
-    var cancelBtn = document.getElementsByClassName('modal__button_cancel')[0];
-    var uninstallBtn = document.getElementsByClassName('button_uninstall')[0];
+    var cancelBtn = document.getElementsByClassName('button-container_cancel')[0];
+    var uninstallBtn = document.getElementsByClassName('button-container_uninstall')[0];
 
     // Listen for open click
     modalBtn.addEventListener('click', openModal);
@@ -41,7 +41,10 @@ function popUpHandler() {
     function toggleClass(currentClass, netxClass){
         if(modal.classList.contains(currentClass)){
             modal.classList.remove(currentClass);
-            modal.classList.add(netxClass);
+            setTimeout( function(){
+                modal.classList.add(netxClass);
+            }, 350);
+            // modal.classList.add(netxClass);
         }
     }
 
@@ -49,7 +52,8 @@ function popUpHandler() {
     function outsideClick(e) {
         e.preventDefault();
         if (e.target === modal) {
-            modal.style.display = 'none';
+            toggleClass('open','is-hidden');
+            // modal.style.display = 'none';
         }
     }
 
