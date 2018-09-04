@@ -1,0 +1,134 @@
+@import "reset";
+@import "variables";
+
+.contentBlock {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+
+.modal__closeBtn:hover{
+  svg path {
+    fill: $active_button_color !important;
+  }
+}
+
+.button {
+  cursor: pointer;
+  width: 210px;
+  height: 40px;
+  font-family: $main_text_font;
+  font-size: 18px;
+  font-weight: $semi_bold_text;
+  border: 2px solid $active_border_color;
+  color: $active_text_color;
+  background-color: $active_button_color;
+  outline: none;
+  border-radius: $border_radius;
+  letter-spacing: 0.04em;
+
+  //&:hover {
+  //  background-color: black;
+  //}
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: $popUp_background;
+
+  &__content {
+    width: 580px;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $popUp_content_background;
+    box-shadow: $popUp_content_shadow;
+    border-radius: $border_radius;
+    color: $main-text-color;
+    font-family: $main_text_font;
+  }
+
+  &__header {
+    display: block;
+  }
+
+  &__closeBtn {
+    display: block;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+    &:focus {
+      cursor: pointer;
+    }
+  }
+
+  &__body {
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+  }
+
+  &__notificationIcon {
+    width: 118px;
+    height: 121px;
+    margin-top: 17px;
+  }
+  &__text {
+    font-size: 29px;
+    line-height: 36px;
+    padding-top: 25px;
+    padding-bottom: 16px;
+    letter-spacing: -0.024em;
+    font-weight: 300;
+  }
+
+  &__buttons {
+    margin-bottom: 26px;
+    margin-top: 27px;
+  }
+
+  &__button {
+    &_cancel {
+      color: $inactive_text_color;
+      border-color: $inactive_border_color;
+      background-color: $popUp_content_background;
+      margin-right: 15px;
+      transition: all .8s ease;
+
+      //&:hover {
+      //  background: $active_button_color;
+      //  color: $active_text_color;
+      //}
+    }
+  }
+
+}
+
+@import "animation/button_modal";
+
+
