@@ -3,13 +3,13 @@
 var app = app || {};
 
 function popUpHandler() {
+
     // Get elements
     var modalBg = document.getElementById('modal');
     var modalBtn = document.getElementsByClassName('btnFront')[0];
     var closeBtnIcon = document.getElementsByClassName('modal__closeIcon')[0];
     var cancelBtn = document.getElementsByClassName('btn_cancel')[0];
     var uninstallBtn = document.getElementsByClassName('btn_uninstall')[0];
-
 
     // Listen open click event
     modalBtn.addEventListener('click', sendOpenModalPopupEvent);
@@ -34,18 +34,18 @@ function popUpHandler() {
         delayOpenModal(event.detail);
     });
 
-
     // Custom Events
 
     function sendCloseModalPopupEvent() {
-        var event = new CustomEvent("close-modal-popup", { detail: 'uninstall-popup' });
+        var event = new CustomEvent("close-modal-popup", { detail: 'uninstall_popup' });
         document.dispatchEvent(event);
     }
 
     function sendOpenModalPopupEvent() {
-        var event = new CustomEvent("open-modal-popup", { detail: 'uninstall-popup' });
+        var event = new CustomEvent("open-modal-popup", { detail: 'uninstall_popup' });
         document.dispatchEvent(event);
     }
+
 
     // Open Popup Behavior
 
@@ -104,7 +104,7 @@ function popUpHandler() {
     function uninstall(e) {
         e.preventDefault();
         return new Promise((resolve) => {
-            closeModal();
+            sendCloseModalPopupEvent();
             setTimeout(() => resolve(), 450);
         }).then(showAlert);
     }
@@ -121,4 +121,5 @@ function popUpHandler() {
             el.classList.add(nextClass);
         }
     }
+
 }

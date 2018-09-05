@@ -15,7 +15,7 @@ app.bubbleAnimation = function () {
     };
 
     var init = function () {
-        var bubblyButtons = document.getElementsByClassName("bubbly-button");
+        var bubblyButtons = document.getElementsByClassName("btn_bubbly");
 
         for (var i = 0; i < bubblyButtons.length; i++) {
             bubblyButtons[i].addEventListener('click', animateButton, false);
