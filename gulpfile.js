@@ -32,7 +32,7 @@ gulp.task('js', function () {
         presets: ['@babel/env']
     }))
         .pipe(concat('main.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
 

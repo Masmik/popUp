@@ -1,17 +1,17 @@
-
 var app = app || {};
 
 app.bubbleAnimation = function () {
 
-    var animateButton = function(e) {
+    var animateButton = function (e) {
         e.preventDefault();
-        //reset animation
+
+        // Reset animation
         e.target.classList.remove('animate');
 
         e.target.classList.add('animate');
-        setTimeout(function(){
+        setTimeout(function () {
             e.target.classList.remove('animate');
-        },700);
+        }, 700);
     };
 
     var init = function () {
@@ -19,7 +19,7 @@ app.bubbleAnimation = function () {
 
         for (var i = 0; i < bubblyButtons.length; i++) {
             bubblyButtons[i].addEventListener('click', animateButton, false);
-        };
+        }
     };
 
     return {

@@ -47,11 +47,13 @@
     background-color: $active_button_color;
     color: $active_text_color;
   }
+
   &_cancel {
     margin-right: 15px;
     border: 2px solid $inactive_border_color;
     color: $inactive_text_color;
     transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+
     &:hover {
       box-shadow: 0 0 40px 40px $inactive_border_color inset;
     }
@@ -91,9 +93,11 @@
       transform: translate(-50%, -50%);
     }
   }
+
   &__header {
     display: block;
   }
+
   &__closeIcon {
     display: block;
     margin-top: 19px;
@@ -101,24 +105,29 @@
     border: none;
     outline: none;
     transition: cubic-bezier(0.175, 0.885, 0.52, 1.775) 200ms;
+
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
     }
+
     &:focus {
       cursor: pointer;
     }
   }
+
   &__body {
     margin-left: 70px;
     margin-right: 70px;
     text-align: center;
   }
+
   &__notificationIcon {
     width: 118px;
     height: 121px;
     margin-top: -11px;
   }
+
   &__text {
     font-size: 29px;
     line-height: 36px;
@@ -127,6 +136,7 @@
     letter-spacing: -0.024em;
     font-weight: 300;
   }
+
   &__btn {
     margin-bottom: 48px;
     margin-top: 26px;

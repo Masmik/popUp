@@ -3,7 +3,7 @@
 var app = app || {};
 
 function ready() {
-    popUpHandler();
+    app.popUpHandler.init();
     app.bubbleAnimation.init();
 }
 
