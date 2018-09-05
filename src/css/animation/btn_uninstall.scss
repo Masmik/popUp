@@ -1,0 +1,36 @@
+@keyframes sheen {
+  0% {
+    transform: skewY(-45deg) translateX(0);
+  }
+  100% {
+    transform: skewY(-45deg) translateX(12.5em);
+  }
+}
+
+.btn_uninstall {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+    width: 3em;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -6em;
+    transform: skewX(-45deg) translateX(0);
+    transition: none;
+  }
+  &:hover {
+    background-color: $active_border_color;
+    color: $active_text_color;
+
+    &:before {
+      transform: skewX(-45deg) translateX(30em);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
+

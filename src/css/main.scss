@@ -1,6 +1,7 @@
 @import "reset";
 @import "variables";
 @import "animation/bubbly_button";
+@import "animation/btn_uninstall";
 
 .wrapper {
   box-sizing: border-box;
@@ -17,17 +18,44 @@
 }
 
 .btn {
+  box-sizing: border-box;
+  display: inline-block;
   cursor: pointer;
   width: 210px;
   height: 40px;
   font-family: $main_text_font;
   font-size: 18px;
   font-weight: $semi_bold_text;
-  border: 2px solid $active_border_color;
-  background-color: $active_button_color;
   outline: none;
   border-radius: $border_radius;
   letter-spacing: 0.04em;
+  appearance: none;
+  background-color: transparent;
+  line-height: 1;
+
+  &:hover,
+  &:focus {
+    color: #fff;
+    outline: 0;
+  }
+
+  &_uninstall {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid $active_border_color;
+    background-color: $active_button_color;
+    color: $active_text_color;
+  }
+  &_cancel {
+    margin-right: 15px;
+    border: 2px solid $inactive_border_color;
+    color: $inactive_text_color;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    &:hover {
+      box-shadow: 0 0 40px 40px $inactive_border_color inset;
+    }
+  }
 }
 
 .modal {
@@ -38,15 +66,10 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  //background-color: rgba(0, 0, 0, 0);
   background-color: $popUp_background;
   transition: all 0.3s ease-in-out;
   opacity: 0;
   z-index: 1;
-
-  //&.open {
-  //  background-color: $popUp_background;
-  //}
 
   &__content {
     opacity: 0;
@@ -94,7 +117,7 @@
   &__notificationIcon {
     width: 118px;
     height: 121px;
-    margin-top: -10px;
+    margin-top: -11px;
   }
   &__text {
     font-size: 29px;
@@ -107,13 +130,12 @@
   &__btn {
     margin-bottom: 48px;
     margin-top: 26px;
+    vertical-align: middle;
   }
 }
 
 .hidden {
   visibility: hidden;
-  //display: none;
-  //opacity: 0;
 }
 
 .open {
