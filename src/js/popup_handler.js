@@ -82,7 +82,7 @@ app.popUpHandler = function () {
     };
 
     var showAlert = function () {
-        alert("Done");
+        alert("DONE");
     };
 
     // Auxiliary functions
